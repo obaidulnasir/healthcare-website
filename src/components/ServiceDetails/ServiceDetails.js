@@ -14,13 +14,16 @@ const ServiceDetails = () => {
   const singleItem = service.find((singleService) => singleService.key == serviceId);
   // const{title, description} = singleItem;
   console.log(singleItem);
+  
   return (
     <div>
       <div className="service-details">
         <div className="container">
           <div className="row text-center">
             <div className="col">
+              <img src={singleItem?.img} alt="" />
               <h3>{singleItem?.title}</h3>
+              <p>{singleItem?.description}</p>
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           </Switch>
         </Router>
       </AuthProvider>
+      <Footer></Footer>
     </div>
   );
 }
