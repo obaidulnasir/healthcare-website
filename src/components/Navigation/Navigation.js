@@ -17,12 +17,13 @@ const Navigation = () => {
             <Link to="/service" className="nav-link">
               Service
             </Link>
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
             <Link to="/about" className="nav-link">
               About
             </Link>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+           
           </Nav>
         </Container>
       </Navbar>
