@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation/Navigation";
 import AuthProvider from "./components/AuthProvider/AuthProvider";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Services from "./components/Services/Services";
 
 function App() {
   return (
@@ -20,11 +21,8 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            {/* <Route path="/service">
-              <Service></Service>
-            </Route> */}
             <PrivateRoute path="/service">
-              <Service></Service>
+              <Services></Services>
             </PrivateRoute>
             <Route path="/about">
               <About></About>

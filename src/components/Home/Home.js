@@ -23,6 +23,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* second section  */}
       <div className="container my-5">
         <div className="row d-flex align-items-center">
           <div className="col-md-6 p-5">
@@ -32,13 +33,23 @@ const Home = () => {
               form, by humour randomised words.
             </p>
             <button className="btn btn-info rounded text-white">
-                Our Services
-              </button>
+              Our Services
+            </button>
           </div>
           <div className="col-md-6">
-              <img className="rounded" width="70%" src="./img/vaccinate.jpg" alt="vaccinate" />
+            <img
+              className="rounded"
+              width="70%"
+              src="./img/vaccinate.jpg"
+              alt="vaccinate"
+            />
           </div>
         </div>
+      </div>
+
+      {/* service section */}
+      <div className="service-section">
+        <div className="container"></div>
       </div>
     </div>
   );
