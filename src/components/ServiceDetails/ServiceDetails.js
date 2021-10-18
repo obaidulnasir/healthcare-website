@@ -11,14 +11,20 @@ const ServiceDetails = () => {
       .then((data) => setService(data));
   }, []);
   
-  const singleItem = service.find(
-    (singleService) => singleService.key == serviceId
-  );
-  const{title, description} = singleItem;
- 
+  const singleItem = service.find((singleService) => singleService.key == serviceId);
+  // const{title, description} = singleItem;
+  console.log(singleItem);
   return (
     <div>
-      {title} {description}
+      <div className="service-details">
+        <div className="container">
+          <div className="row text-center">
+            <div className="col">
+              <h3>{singleItem?.title}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

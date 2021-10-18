@@ -62,8 +62,8 @@ const Home = () => {
         <div className="container py-5">
           <div className="row g-2">
             {service.slice(3, 9).map(service=>
-            <div className="col-md-4">
-              <div className="text-center text-white border py-5">
+            <div className="col-md-4 d-flex align-items-stretch">
+              <div className="text-center text-white border p-3">
                 <h3>{service.title}</h3>
                 <p>{service.mini_description}</p>
                 <Link to={`/service/${service.key}`} className="btn btn-success">See More Details</Link>

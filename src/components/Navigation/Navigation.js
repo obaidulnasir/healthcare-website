@@ -23,7 +23,7 @@ const Navigation = () => {
               About
             </Link>
             {user.email? 
-            <div> <span className="text-white">{user.displayName}</span><button onClick={handleLogout} className="btn btn-danger">Logout</button> </div>
+            <div> <span className="text-white">{user.displayName || user.email}</span><button onClick={handleLogout} className="btn btn-danger">Logout</button> </div>
              :<Link to="/login" className="nav-link">
               Login
             </Link>}
