@@ -5,6 +5,8 @@ import {
   GoogleAuthProvider,
   onAuthStateChanged,
   signOut,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 
@@ -39,6 +41,30 @@ const useFirebase = () => {
         console.log(error);
       });
   };
+
+  //   user registration
+  const handleUserRegister = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message)
+      });
+  };
+
+  //   user email password login
+  const handleUserLogin = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+          setUser(result.user)
+        console.log(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
+        console.log(error.message);
+      });
+  };
   //   on auth stage change
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -55,7 +81,9 @@ const useFirebase = () => {
     user,
     error,
     signInWithGoogle,
-    handleLogout
+    handleLogout,
+    handleUserLogin,
+    handleUserRegister
   };
 };
 

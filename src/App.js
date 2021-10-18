@@ -7,6 +7,8 @@ import Login from "./components/Login/Login";
 import About from "./components/About/About";
 import Navigation from "./components/Navigation/Navigation";
 import AuthProvider from "./components/AuthProvider/AuthProvider";
+import Register from "./components/Register/Register";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -18,14 +20,20 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/service">
+            {/* <Route path="/service">
               <Service></Service>
-            </Route>
+            </Route> */}
+            <PrivateRoute path="/service">
+              <Service></Service>
+            </PrivateRoute>
             <Route path="/about">
               <About></About>
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/register">
+                <Register></Register>
             </Route>
           </Switch>
         </Router>
