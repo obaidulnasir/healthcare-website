@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
+
+  const [service, setService] = useState([]);
+  useEffect(() => {
+    fetch("./pets-fake-data.json")
+      .then((res) => res.json())
+      .then((data) => setService(data));
+  }, []);
+
+
   return (
     <div>
       <div className="banner-section">
@@ -49,7 +59,18 @@ const Home = () => {
 
       {/* service section */}
       <div className="service-section">
-        <div className="container"></div>
+        <div className="container py-5">
+          <div className="row g-2">
+            {service.slice(3, 9).map(service=>
+            <div className="col-md-4">
+              <div className="text-center text-white border py-5">
+                <h3>{service.title}</h3>
+                <p>{service.mini_description}</p>
+                <Link to={`/service/${service.key}`} className="btn btn-success">See More Details</Link>
+              </div>
+            </div>)}
+          </div>
+        </div>
       </div>
     </div>
   );

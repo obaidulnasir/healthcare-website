@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Service from "./components/Service/Service";
+
 import Login from "./components/Login/Login";
 import About from "./components/About/About";
 import Navigation from "./components/Navigation/Navigation";
@@ -10,6 +10,7 @@ import AuthProvider from "./components/AuthProvider/AuthProvider";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Services from "./components/Services/Services";
+import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 
 function App() {
   return (
@@ -21,8 +22,11 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/service">
+            <PrivateRoute exact path="/service">
               <Services></Services>
+            </PrivateRoute>
+            <PrivateRoute path="/service/:serviceId">
+              <ServiceDetails></ServiceDetails>
             </PrivateRoute>
             <Route path="/about">
               <About></About>
@@ -31,7 +35,10 @@ function App() {
               <Login></Login>
             </Route>
             <Route path="/register">
-                <Register></Register>
+              <Register></Register>
+            </Route>
+            <Route exact path="/">
+              <Home></Home>
             </Route>
           </Switch>
         </Router>
