@@ -18,7 +18,7 @@ const Home = () => {
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-6 p-5 text-white">
-              <h2>First I wanted to be a veterinarian</h2>
+              <h2>Help animal find safety an love.</h2>
               <p>
                 Lorem Ipsum available but the majority have suffered alteration
                 in some form, by injected humour randomized words.
@@ -61,11 +61,12 @@ const Home = () => {
       <div className="service-section">
         <div className="container py-5">
           <div className="row g-2">
-            {service.slice(3, 9).map(service=>
-            <div className="col-md-4 d-flex align-items-stretch">
+            {service.slice(0,3).map(service=>
+            <div className="col-md-4 col-sm-12 d-flex align-items-stretch">
               <div className="text-center text-white border p-3">
+                <img src={service.img} width="60%" alt="" srcset="" />
                 <h3>{service.title}</h3>
-                <p>{service.mini_description}</p>
+                <p>{service.description.slice(0,100)}...</p>
                 <Link to={`/service/${service.key}`} className="btn btn-success">See More Details</Link>
               </div>
             </div>)}
