@@ -5,7 +5,7 @@ https://pets-care-obaidulnasir.netlify.app/
 
 
 ## Useing Materials
-  <li>Reaact JS</li>
+  <li>React JS</li>
   <li>Firebase</>
   <li>React Router Dom</li>
   <li>React Bootstrap</li>
