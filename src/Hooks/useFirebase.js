@@ -14,6 +14,7 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading]= useState(true);
 
   const auth = getAuth();
 
@@ -21,6 +22,7 @@ const useFirebase = () => {
 
   //   google login
   const signInWithGoogle = () => {
+    setIsLoading(true);
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
@@ -28,18 +30,21 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(()=>setIsLoading(false));
   };
 
   //  logout
   const handleLogout = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setUser({});
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
+      .finally(()=> setIsLoading(false));
   };
 
   //   user registration
@@ -75,10 +80,12 @@ const useFirebase = () => {
         // User is signed out
         // ...
       }
+      setIsLoading(false);
     });
   }, []);
 
   return {
+    isLoading,
     user,
     error,
     signInWithGoogle,

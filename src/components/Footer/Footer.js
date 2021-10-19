@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="row text-white">
                     <div className="col-md-6">
                         <h3>eheoiojjj</h3>
-                        <p className="text-muted">Lorem  io gipsum dolor sit amet consectetur adipisicing elit. Odio quae fuga recusandae, minus at aliquam enim earum eveniet vel cumque quasi distinctio ipsa cum! Omnis, natus veritatis, veniam dignissimos corrupti pariatur velit dolorum quia dolores cupiditate reprehenderit libero hic.</p>
+                        <p className="text-muted">With our Complete Care Health Plan, you'll receive all the healthcare essentials, expert veterinary care and cost savings on routine treatments.</p>
                     </div>
                     <div className="col-md-3">
                         <ul>
