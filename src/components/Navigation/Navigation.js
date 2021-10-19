@@ -10,7 +10,7 @@ const Navigation = () => {
       <Navbar sticky="top" bg="dark" variant="dark">
         <Container>
           <Link to="/home" className="nav-link">
-            <Navbar.Brand>Navbar</Navbar.Brand>
+            <Navbar.Brand>PetsCare</Navbar.Brand>
           </Link>
           <Nav className="mx-auto">
             <Link to="/home" className="nav-link">

@@ -57,7 +57,7 @@ const Home = () => {
       <div className="service-section">
         <div className="container py-5">
           <div className="row g-2">
-            {service.slice(0,3).map(service=>
+            {service.slice(1,7).map(service=>
             <div className="col-md-4 col-sm-12 d-flex align-items-stretch">
               <div className="text-center text-white border p-3">
                 <img src={service.img} width="60%" alt="" srcset="" />
