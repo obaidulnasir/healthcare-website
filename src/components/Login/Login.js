@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import "./Login.css"
+import "./Login.css";
 
 const Login = () => {
   const { signInWithGoogle, handleUserLogin } = useAuth();
@@ -20,21 +20,39 @@ const Login = () => {
 
   return (
     <div>
-      <div className="my-5">
-        <div className="w-50 login mx-auto p-5 rounded">
-          <div className="text-center">
-            <input onBlur={userEmail} type="email" />
-            <br />
-            <input onBlur={userPassword} type="password" />
-            <br />
-            <button onClick={handleUserLogin(email, password)}>Login</button>
-            <br />
-            <Link to="/register">new user?</Link>
-            <hr />
-            <button onClick={signInWithGoogle}><i class="bi bi-google"></i> Sign in with Google</button>
+      <div className="text-center my-5 fs-1 fw-bolder">Login</div>
+      <div className="w-50 mx-auto login py-2 my-5 rounded">
+        <form className="w-75 mx-auto">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label fw-bold">
+              Email address
+            </label>
+            <input onBlur={userEmail} type="email" class="form-control" />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-        </div>
-       
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label fw-bold">
+              Password
+            </label>
+            <input onBlur={userPassword} type="password" class="form-control" />
+          </div>
+          <button
+            onClick={handleUserLogin(email, password)}
+            class="btn btn-primary"
+          >
+            Login
+          </button>
+          <hr />
+          <button onClick={signInWithGoogle} className="btn btn-success">
+            <i class="bi bi-google"></i> Sign in with Google
+          </button>
+          <br />
+          <Link to="/register" className="text-white mt-3">
+            New User??
+          </Link>
+        </form>
       </div>
     </div>
   );
