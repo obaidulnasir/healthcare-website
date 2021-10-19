@@ -4,7 +4,7 @@
 https://pets-care-obaidulnasir.netlify.app/
 
 
-## Useing Matarials
+## Useing Materials
   <li>Reaact JS</li>
   <li>Firebase</>
   <li>React Router Dom</li>
