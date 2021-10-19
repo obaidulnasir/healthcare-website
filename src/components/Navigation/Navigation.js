@@ -7,7 +7,7 @@ const Navigation = () => {
   const {user, handleLogout}= useAuth()
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar sticky="top" bg="dark" variant="dark">
         <Container>
           <Link to="/home" className="nav-link">
             <Navbar.Brand>Navbar</Navbar.Brand>
@@ -18,6 +18,9 @@ const Navigation = () => {
             </Link>
             <Link to="/service" className="nav-link">
               Service
+            </Link>
+            <Link to="/doctors" className="nav-link">
+              Doctors
             </Link>
             <Link to="/about" className="nav-link">
               About

@@ -22,9 +22,9 @@ const Login = () => {
     <div>
       <div className="text-center my-5 fs-1 fw-bolder">Login</div>
       <div className="w-50 mx-auto login py-2 my-5 rounded">
-        <form className="w-75 mx-auto">
+        <div className="w-75 mx-auto">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label fw-bold">
+            <label class="form-label fw-bold">
               Email address
             </label>
             <input onBlur={userEmail} type="email" class="form-control" />
@@ -52,7 +52,7 @@ const Login = () => {
           <Link to="/register" className="text-white mt-3">
             New User??
           </Link>
-        </form>
+        </div>
       </div>
     </div>
   );

@@ -20,8 +20,7 @@ const Home = () => {
             <div className="col-md-6 p-5 text-white">
               <h2>Help animal find safety an love.</h2>
               <p>
-                Lorem Ipsum available but the majority have suffered alteration
-                in some form, by injected humour randomized words.
+              Extraordinary Service. Remarkable Care. ANYTIME you need us.
               </p>
               <button className="btn btn-info rounded text-white">
                 Contact Us
@@ -39,12 +38,9 @@ const Home = () => {
           <div className="col-md-6 p-5">
             <h4>As a veterinarian and lover of animals.</h4>
             <p className="text-muted">
-              Lorem Ipsum available but the majoty suffered alteration in some
-              form, by humour randomised words.
+            With compassion, respect, and expertise, our mission is to help our clients, their companions, and our referral veterinarians when they need it most. 
             </p>
-            <button className="btn btn-info rounded text-white">
-              Our Services
-            </button>
+            
           </div>
           <div className="col-md-6">
             <img

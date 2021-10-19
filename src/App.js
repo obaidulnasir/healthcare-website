@@ -11,6 +11,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Footer from "./components/Footer/Footer";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="/doctors">
+              <OurTeam></OurTeam>
             </Route>
             <Route exact path="/">
               <Home></Home>

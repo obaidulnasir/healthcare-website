@@ -11,11 +11,10 @@ const Services = () => {
   }, []);
   return (
     <div>
-      <h4>length: {service.length}</h4>
       <div>
-        <div className="container">
+        <div className="container my-5">
           <div className="row services">
-            {service.map((service) => (
+            {service.slice(0,9).map((service) => (
               <Service key={service.key} service={service}></Service>
             ))}
           </div>

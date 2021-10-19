@@ -27,6 +27,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        console.log(result.user);
       })
       .catch((error) => {
         setError(error.message);
@@ -60,7 +61,6 @@ const useFirebase = () => {
 
   //   user email password login
   const handleUserLogin = (email, password) => {
-    
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
           setUser(result.user)
