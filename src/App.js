@@ -12,6 +12,7 @@ import Services from "./components/Services/Services";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Footer from "./components/Footer/Footer";
 import OurTeam from "./components/OurTeam/OurTeam";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Home></Home>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </Router>
