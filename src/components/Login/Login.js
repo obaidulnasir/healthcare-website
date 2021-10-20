@@ -21,8 +21,8 @@ const Login = () => {
   return (
     <div>
       <div className="text-center my-5 fs-1 fw-bolder">Login</div>
-      <div className="w-50 mx-auto login py-2 my-5 rounded">
-        <div className="w-75 mx-auto">
+      <div className="w-50 mx-auto login my-5 rounded">
+        <div className="w-75 mx-auto py-5">
           <div class="mb-3">
             <label class="form-label fw-bold">
               Email address

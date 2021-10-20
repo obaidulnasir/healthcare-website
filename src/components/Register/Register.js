@@ -20,8 +20,8 @@ const Register = () => {
   return (
     <div>
       <div className="text-center my-5 fs-1 fw-bolder">Register</div>
-      <div className="w-50 mx-auto register my-5 rounded">
-        <div className="w-75 mx-auto">
+      <div className="w-50 mx-auto register my-5  rounded">
+        <div className="w-75 mx-auto py-5">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label fw-bold">
               Email address
