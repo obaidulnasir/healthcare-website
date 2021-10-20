@@ -26,9 +26,9 @@ const Navigation = () => {
               About
             </Link>
             {user.email? 
-            <div> <span className="text-white">{user.displayName || user.email}</span><button onClick={handleLogout} className="btn btn-danger">Logout</button> </div>
-             :<Link to="/login" className="nav-link">
-              Login
+            <div> <span className="text-white">{user.displayName || user.email}</span><button onClick={handleLogout} className="btn btn-danger">Logout <i class="bi bi-box-arrow-right"></i></button> </div>
+             :<Link to="/login" className="nav-link bg-success">
+             <i class="bi bi-box-arrow-in-left"></i>  Login
             </Link>}
            
           </Nav>
