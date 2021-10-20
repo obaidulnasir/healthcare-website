@@ -7,7 +7,7 @@ const Navigation = () => {
   const {user, handleLogout}= useAuth()
   return (
     <>
-      <Navbar sticky="top" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg"  sticky="top" bg="dark" variant="dark">
         <Container>
           <Link to="/home" className="nav-link">
             <Navbar.Brand>PetsCare</Navbar.Brand>
