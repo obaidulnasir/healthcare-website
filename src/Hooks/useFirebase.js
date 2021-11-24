@@ -82,7 +82,7 @@ const useFirebase = () => {
       }
       setIsLoading(false);
     });
-  }, []);
+  }, [auth]);
 
   return {
     isLoading,
